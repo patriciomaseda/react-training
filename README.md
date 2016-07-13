@@ -1,6 +1,6 @@
 # react-training
 
-##Table of caontents
+##Table of contents
 
 - Introduction, basic concepts, virtual dom, syntax
 - JSX explanation
