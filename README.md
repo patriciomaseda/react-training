@@ -2,7 +2,8 @@
 
 ##Table of contents
 
-- Introduction, basic concepts, virtual dom, syntax
+- Introduction, what is react, basic concepts, virtual dom
+- The goods and the bads
 - JSX explanation
 - Hello world example
 - Components and props
@@ -16,9 +17,20 @@
 
 ##Introduction
 
-###Basic concepts
+*What is react?*
+React is a JavaScript library that's used for building user interfaces. 
 
-###virtual DOM
+*From where it came from?*
+It started at Facebook and it's maintained by developers at Facebook and Instagram and also a huge community of contributors.
+
+*What's de difference between React and some other js libraries like Angular or Backbone?*
+React is intended to be the view or the user interface, the V in MVC. One of the benefits and goals of the React project is to make developing a large scale single page application or SPA, much easier.
+
+*Virtual DOM?*
+Probably the most exciting feature of React though is the virtual DOM. Whenever a change happens the virtual DOM efficiently re-renders the DOM. 
+
+##The Goods and the bads
+
 
 ##JSX
 
