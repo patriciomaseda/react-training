@@ -31,12 +31,76 @@ Probably the most exciting feature of React though is the virtual DOM. Whenever 
 
 ##The Goods and the bads
 
-1. You can always tell how your component will render by looking at one source file.
-2. Bundling Javascript and HTML into JSX makes components easily understandable.
-3. You can render React on the server.
+###Good things
 
+1. Components are really independent from any other thing. We can know what a component is and how it works (event its styles) just looking at one file.
+2. Bundling Javascript and HTML into JSX makes components easily understandable.
+3. Works great for teams, strongly enforcing UI and workflow patterns
+
+###The bads
+
+1. You DO NOT GET any of the following:
+  -  AJAX capabilities or framework.
+  -  Any data layer.
+  -  Promises.
+  -  Any application framework at all.
+We will have to use external libraries to accomplish these things.
+
+2. React will slow you down tremendously until you get a basic knowledge about how all the thing works.
+3. React does not support any browser below IE8
+4. If your applicationdoesn't have very much dynamic page updating, you will be implementing a lot of code for a very small benefit.
 
 ##JSX
+
+###What it is?
+JSX is an inline markup that looks like HTML and gets transformed to JavaScript. A JSX expression starts with an HTML-like open tag, and ends with the corresponding closing tag. JSX tags support the XML self close syntax.
+
+###Do I have to use it mandatorily?
+No
+
+###Then why should I use it?
+JSX expressions are evaluated to ReactElements. Think of them as shorthand for calling `React.createElement()` a hundred times.
+
+For example this code:
+```javascript
+var rootElement =
+  React.createElement('div', {}, 
+    React.createElement('h1', {}, "Contacts"),
+    React.createElement('ul', {},
+      React.createElement('li', {},
+        React.createElement('h2', {}, "Patricio Gabriel Maseda"),
+        React.createElement('a', {href: 'mailto:pmaseda@devspark.com'}, 'pmaseda@devspark.com')
+      ),
+      React.createElement('li', {},
+        React.createElement('h2', {}, "Leandro Mastakas"),
+        React.createElement('a', {href: 'mailto:lmastakas@devspark.com'}, 'lmastakas@devspark.com')
+      )
+    )
+  )
+
+ReactDOM.render(rootElement, document.getElementById('react-app'))
+```
+
+would do the same that this jsx:
+```jsx
+var rootElement = (
+  <div>
+    <h1>Contacts</h1>
+    <ul>
+      <li>
+        <h2>Patricio Gabriel Maseda</h2>
+        <a href="mailto:pmaseda@devspark.com">pmaseda@devspark.com</a>
+      </li>
+      <li>
+        <h2>Leandro Mastakas</h2>
+        <a href="mailto:lmastakas@devspark.com">lmastakas@devspark.com</a>
+      </li>
+    </ul>
+  </div>
+);
+
+ReactDOM.render(rootElement, document.getElementById('react-app'))
+```
 
 ##Hello world in react
 
