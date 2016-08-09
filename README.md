@@ -58,7 +58,7 @@ JSX is an inline markup that looks like HTML and gets transformed to JavaScript.
 ###Do I have to use it mandatorily?
 No
 
-###Then why should I use it?
+###Then why should I use it? :confused:
 JSX expressions are evaluated to ReactElements. Think of them as shorthand for calling `React.createElement()` a hundred times.
 
 For example this code:
@@ -101,6 +101,8 @@ var rootElement = (
 
 ReactDOM.render(rootElement, document.getElementById('react-app'))
 ```
+
+Which one do you like more? :sunglasses:
 
 ##Hello world in react
 
