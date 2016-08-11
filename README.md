@@ -106,9 +106,11 @@ Which one do you like more? :sunglasses:
 
 ##Hello world in react
 
-Clone this repo and checkout the __01-hello-world__ branch for a full hello world example
+Clone this repo and checkout the __01-hello-world__ branch for a full hello world example :open_mouth:
 
 ##Components and props
+
+Checkout the __02-hello-components__ branch for a basic component example. :satisfied:
 
 ##Events
 
