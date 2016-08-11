@@ -110,15 +110,63 @@ Clone this repo and checkout the __01-hello-world__ branch for a full hello worl
 
 ##Components and props
 
+###What is a component?
+
+We can define a component as the minimun element on a react UI interface. Components are self-contained packages of layout, funcionality and in some cases style. That looks like a weird impossible mix at the begining but thinking a little bit more about that, it has some advantages:
+- Isolation. (You can know everything about a component just looking at 1 file)
+- Reusability(You can reuse a component as many times you want and they are easily portable even to other react applications)
+
+Here it is a really simple component example:
+
+```jsx
+const MyComponent = React.createClass({
+  render: function() {
+    return <div className={this.props.className}/>;
+  }
+});
+```
+
+###What are props???
+
+They’re the data that get passed into the component as element attributes. Somewhere else in the app, React listens for __state__ changes and the render() method gets called again passing the changed data into the props.
+
 Checkout the __02-hello-components__ branch for a basic component example. :satisfied:
 
-##Events
+###Three ways of how to define components
+
+The first one, using React.createClass() method:
+```jsx
+const MyComponent = React.createClass({
+  render: function() {
+    return <div className={this.props.className}/>;
+  }
+});
+```
+After the introduction of ES6 React let us define components as a js class:
+```jsx
+class MyComponent extends React.Component {
+  render() {
+    return <div className={this.props.className}/>;
+  }
+}
+```
+
+As a pure function: (From React 0.14):
+```jsx
+const MyComponent = props => (
+  <div className={props.className}/>
+);
+```
 
 ##Components state
 
 ##Concept of stateless functional component
 
 ##LifeCycle methods
+
+##Events
+
+##Routing
 
 ##Flux Architecture
 
