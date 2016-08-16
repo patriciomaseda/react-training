@@ -22,34 +22,31 @@
     <!-- react in action -->
     <script type="text/babel">
 
-      var ThingsToDo = React.createClass({
-        render: function(){
-          return (
-            <div>
-              <h1>Things To Do</h1>
-              <List tasks={[{id: 1, title: "Fight crime"}, {id: 2, title: "Clean the batcave"}]}/>
-            </div>
-          );
-        }
-      });
+      var CounterComponent = React.createClass({
 
-      var List = React.createClass({
-        render: function(){
-          var tasks = this.props.tasks;
-          var items = tasks.map(function(item) {
-            return (
-              <li key={item.id}>{item.title}</li>
-            );
+        getInitialState : function() {
+          return {
+            currentCount : 1,
+          };
+        },
+
+        handleClick: function(e) {
+          this.setState({
+            currentCount: this.state.currentCount + 1
           });
+        },
 
+        render : function() {
           return (
-            <ul>{items}</ul>
+            <button onClick={this.handleClick}>
+              Current count: {this.state.currentCount}
+            </button>
           );
         }
       });
 
       ReactDOM.render(
-        <ThingsToDo />,
+        <CounterComponent />,
         document.getElementById('app-container')
       );
     </script>
