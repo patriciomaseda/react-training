@@ -22,31 +22,27 @@
     <!-- react in action -->
     <script type="text/babel">
 
-      var CounterComponent = React.createClass({
+      const divStyle = {
+        padding: '30px',
+      };
 
-        getInitialState : function() {
-          return {
-            currentCount : 1,
-          };
-        },
-
-        handleClick: function(e) {
-          this.setState({
-            currentCount: this.state.currentCount + 1
-          });
-        },
-
-        render : function() {
-          return (
-            <button onClick={this.handleClick}>
-              Current count: {this.state.currentCount}
-            </button>
-          );
-        }
-      });
+      const Text = ({ children }) => 
+        <div style={divStyle}>{children}</div>
+      Text.defaultProps = { children: 'Hello I am a stateless!' };
 
       ReactDOM.render(
-        <CounterComponent />,
+        <div>
+          <Text />
+          <Text>
+            Hello I am a second stateless, and I received what to write.
+          </Text>
+          <Text>
+            Hello I am the third stateless.
+            <Text>
+              And I am inside.
+            </Text>
+          </Text>
+        </div>,
         document.getElementById('app-container')
       );
     </script>
