@@ -160,7 +160,79 @@ const MyComponent = props => (
 ```
 
 ##Component state
+Just like the props, state affects how the component behaves and is rendered. It is basically another way to add dinamicity to the components.
 
+###Key differences between props and state:
+- State is internal and controlled by the component itself while props are external and controlled by whatever renders the component
+- State should be considered private data and props are more like a parameter received from the outworld.
+- State needs to be initialized, props are just received.
+
+###Initializing the component state:
+
+####On a component created using createClass() method:
+```jsx
+var CounterComponent = React.createClass({
+  getInitialState : function() {
+    return {
+      currentCount : 1,
+    };
+  },
+  render : function() {
+    return (
+      <button>
+        Current count: {this.state.currentCount}
+      </button>
+    );
+  }
+});
+```
+####ES6 flavour:
+```jsx
+class CounterComponent extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentCount : 1,
+    };
+  }
+ 
+  render : function() {
+    return (
+      <button>
+        Current count: {this.state.currentCount}
+      </button>
+    );
+  }
+}
+```
+
+###Updating the component state:
+Here it is a simple example of how the state value has to be updated when some action is performed __over the component__.
+```jsx
+var CounterComponent = React.createClass({
+  
+  getInitialState : function() {
+    return {
+      currentCount : 1,
+    };
+  },
+  
+  handleClick: function(e) {
+    this.setState({
+      currentCount: this.state.currentCount + 1
+    });
+  },
+  
+  render : function() {
+    return (
+      <button>
+        Current count: {this.state.currentCount}
+      </button>
+    );
+  }
+});
+```
 
 ##Concept of stateless functional component
 
