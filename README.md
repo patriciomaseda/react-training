@@ -226,13 +226,14 @@ var CounterComponent = React.createClass({
   
   render : function() {
     return (
-      <button>
+      <button onClick={this.handleClick}>
         Current count: {this.state.currentCount}
       </button>
     );
   }
 });
 ```
+To see this code working please checkout branch __03-hello-state__ on this repository.
 
 ##Concept of stateless functional component
 
