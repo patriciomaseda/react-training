@@ -102,6 +102,11 @@ var rootElement = (
 ReactDOM.render(rootElement, document.getElementById('react-app'))
 ```
 
+###Why className?
+You'll notice that React uses className instead of the traditional DOM class. From the docs, "Since JSX is JavaScript, identifiers such as class and for are discouraged as XML attribute names. Instead, React DOM components expect DOM property names like className and htmlFor, respectively."
+
+###What are props???
+
 Which one do you like more? :sunglasses:
 
 ##Hello world in react
@@ -125,8 +130,6 @@ const MyComponent = React.createClass({
   }
 });
 ```
-
-###What are props???
 
 They’re the data that get passed into the component as element attributes. Somewhere else in the app, React listens for __state__ changes and the render() method gets called again passing the changed data into the props.
 
@@ -158,7 +161,8 @@ const MyComponent = props => (
 );
 ```
 
-##Components state
+##Component state
+
 
 ##Concept of stateless functional component
 
@@ -177,3 +181,6 @@ const MyComponent = props => (
 ###Babel
 
 ##Practical Example
+
+##Useful links:
+- Official JSX docs: [https://facebook.github.io/react/docs/jsx-in-depth.html](https://facebook.github.io/react/docs/jsx-in-depth.html)
