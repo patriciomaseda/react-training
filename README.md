@@ -103,9 +103,7 @@ ReactDOM.render(rootElement, document.getElementById('react-app'))
 ```
 
 ###Why className?
-You'll notice that React uses className instead of the traditional DOM class. From the docs, "Since JSX is JavaScript, identifiers such as class and for are discouraged as XML attribute names. Instead, React DOM components expect DOM property names like className and htmlFor, respectively."
-
-###What are props???
+You'll notice that React uses className instead of the traditional DOM class. From the docs, _"Since JSX is JavaScript, identifiers such as class and for are discouraged as XML attribute names. Instead, React DOM components expect DOM property names like className and htmlFor, respectively."_
 
 Which one do you like more? :sunglasses:
 
