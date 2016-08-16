@@ -159,6 +159,9 @@ const MyComponent = props => (
 );
 ```
 
+###PropTypes:
+
+
 ##Component state
 Just like the props, state affects how the component behaves and is rendered. It is basically another way to add dinamicity to the components.
 
@@ -235,7 +238,17 @@ var CounterComponent = React.createClass({
 ```
 To see this code working please checkout branch __03-hello-state__ on this repository.
 
+###When should I use state?
+
+__NEVER__, or almost never.
+
+Sometimes, but rarely, it can be useful for a component to maintain internal state. Only if your state isn’t causing side-effects, __maybe__ it’s OK.
+
 ##Concept of stateless functional component
+
+Stateless components may also be referred to as Pure Components, or even Dumb Components, and are meant to represent any React Component declared as a function that has no state and returns the same markup given the same props. 
+
+These kind of components have to be majority in any application. B, Because of that from React 0.14 ability to write these stateless components as functions has been added.
 
 ##LifeCycle methods
 
