@@ -285,12 +285,6 @@ __componentWillUnmount()__ -> immediately before the component is unmounted from
 
 ##Flux Architecture
 
-##Environment Setup
-
-###Webpack
-
-###Babel
-
 ##Practical Example
 
 ##Useful links:
