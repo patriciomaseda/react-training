@@ -252,7 +252,34 @@ These kind of components have to be majority in any application. B, Because of t
 
 ##LifeCycle methods
 
-##Events
+Until now we have covered the `render` method and the props and state inicialization methods but we also have some other special methods that we can call. For example, what if we want to do something before or after the component has rendered or mounted ? What if we want to avoid a re-render?
+
+Looks like we need more control over the stages that a component goes through. The process where all these stages are involved is called the component’s lifecycle and every React component goes through it. React provides several methods that notify us when certain stage of this process occurs. These methods are called the component’s lifecycle methods and they are invoked in a predictable order.
+
+###Phases:
+
+initialization -> mounting -> updating -> unmounting
+
+####Initialization
+Defaults and initial values for this.props and this.state are set. (_getDefaultProps()_ and _getInitialState()_)
+
+####Mounting
+When a component is being inserted into the DOM. (_componentWillMount()_ and _componentDidMount()_)
+
+__componentWillMount()__ -> invoked once and immediately before the initial rendering occurs.
+__componentDidMount()__ -> just once and immediately after React inserts the component into the DOM
+
+####Updating
+During this phase a React component is already inserted into the DOM. (_componentWillReceiveProps()_, _shouldComponentUpdate()_, _componentWillUpdate()_, _componentDidUpdate()_)
+
+__componentWillReceiveProps()__ -> invoked when a component is receiving new props.
+__shouldComponentUpdate()__ -> allows us to decide whether the next component’s state should trigger a re-render or not.
+__componentWillUpdate()__ -> is called immediately before rendering.
+__componentDidUpdate()__ -> is called immediately after React updates the DOM 
+
+####Unmounting
+
+__componentWillUnmount()__ -> immediately before the component is unmounted from the DOM.
 
 ##Routing
 
