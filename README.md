@@ -267,14 +267,18 @@ Defaults and initial values for this.props and this.state are set. (_getDefaultP
 When a component is being inserted into the DOM. (_componentWillMount()_ and _componentDidMount()_)
 
 __componentWillMount()__ -> invoked once and immediately before the initial rendering occurs.
+
 __componentDidMount()__ -> just once and immediately after React inserts the component into the DOM
 
 ####Updating
 During this phase a React component is already inserted into the DOM. (_componentWillReceiveProps()_, _shouldComponentUpdate()_, _componentWillUpdate()_, _componentDidUpdate()_)
 
 __componentWillReceiveProps()__ -> invoked when a component is receiving new props.
+
 __shouldComponentUpdate()__ -> allows us to decide whether the next component’s state should trigger a re-render or not.
+
 __componentWillUpdate()__ -> is called immediately before rendering.
+
 __componentDidUpdate()__ -> is called immediately after React updates the DOM 
 
 ####Unmounting
