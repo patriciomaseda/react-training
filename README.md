@@ -281,7 +281,20 @@ __componentDidUpdate()__ -> is called immediately after React updates the DOM
 
 __componentWillUnmount()__ -> immediately before the component is unmounted from the DOM.
 
-##Routing
+##Getting closer to a real application architecture:
+
+###Routing
+As we said previously React is only the V of an MVC app, so in order to make React render different things for different routes we will be using an external library. Thats where react-router comes in.
+
+(https://github.com/reactjs/react-router)[https://github.com/reactjs/react-router]
+
+To an easy react-router example checkout the branch 05-hello-router in this repo.
+
+####Steps to get the app up:
+- cd to the repo directory
+- run `npm install`
+- run `npm run start`
+- goto `http://localhost` and see the app running.
 
 ##Flux Architecture
 
