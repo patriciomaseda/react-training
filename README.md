@@ -161,6 +161,8 @@ const MyComponent = props => (
 
 ###PropTypes:
 
+###DefaultProps: (completar defaultprops y proptypes)
+
 
 ##Component state
 Just like the props, state affects how the component behaves and is rendered. It is basically another way to add dinamicity to the components.
