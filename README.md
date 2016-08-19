@@ -242,7 +242,7 @@ To see this code working please checkout branch __03-hello-state__ on this repos
 
 ###When should I use state?
 
-__NEVER__, or almost never.
+__NEVER__, or almost never. __poner un ejemplo__
 
 Sometimes, but rarely, it can be useful for a component to maintain internal state. Only if your state isn’t causing side-effects, __maybe__ it’s OK.
 
