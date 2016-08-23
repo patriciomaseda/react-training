@@ -289,10 +289,32 @@ __componentWillUnmount()__ -> immediately before the component is unmounted from
 
 ##Getting closer to a real application architecture:
 
-###Routing
-As we said previously React is only the V of an MVC app, so in order to make React render different things for different routes we will be using an external library. Thats where react-router comes in.
+These following stuff is not really React, but the idea is to give you an insight of which tools you will need/see on a React application environment in the real life.
 
-(https://github.com/reactjs/react-router)[https://github.com/reactjs/react-router]
+###Webpack[http://webpack.github.io/](http://webpack.github.io/)
+Webpack is a powerful module bundler. A bundle is a JavaScript file that incorporate assets that belong together and should be served to the client in a response to a single file request.
+
+Webpack roams over your application source code, looking for import statements, building a dependency graph, and emitting one (or more) bundles. With plugin "loaders" Webpack can preprocess and minify different non-JavaScript files such as TypeScript, SASS, and LESS files.
+
+###Babel[https://babeljs.io/](https://babeljs.io/)
+Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production. You need Babel because browser vendors are slow to adopt new language features.
+
+For example for this ES6 fat arrow funcion:
+```javascript
+let myFunc = () => {
+  console.log("Hello ES6!");
+};
+```
+
+after the babel transpiling we will get:
+```javascript
+var myFunc = function() {
+  console.log("Hello ES6!");
+};
+```
+
+###Routing(https://github.com/reactjs/react-router)[https://github.com/reactjs/react-router]
+As we said previously React is only the V of an MVC app, so in order to make React render different things for different routes we will be using an external library. Thats where react-router comes in.
 
 To an easy react-router example checkout the branch 05-hello-router in this repo.
 
@@ -302,9 +324,32 @@ To an easy react-router example checkout the branch 05-hello-router in this repo
 - run `npm run start`
 - goto `http://localhost` and see the app running.
 
+####React Router basic implementation:
+```jsx
+ReactDOM.render((
+  <Router history={hashHistory}>
+    <Route path="/" component={App}/>
+    <Route path="/repos" component={Repos}/>
+    <Route path="/about" component={About}/>
+  </Router>
+), document.getElementById('app'));
+```
+React Router is rendered as any other component.
+
+#####What is that `history` thing? [https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md](https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md)
+A history knows how to listen to the browser's address bar for changes and parses the URL into a location object that the router can use to match routes and render the correct set of components
+
+
+##Forms
+
 ##Flux Architecture
 
 ##Practical Example
 
 ##Useful links:
 - Official JSX docs: [https://facebook.github.io/react/docs/jsx-in-depth.html](https://facebook.github.io/react/docs/jsx-in-depth.html)
+- React Router (https://github.com/reactjs/react-router)[https://github.com/reactjs/react-router]
+- Webpack official: [http://webpack.github.io/](http://webpack.github.io/)
+- Babel [https://babeljs.io/](https://babeljs.io/)
+- Babel Loader [https://github.com/babel/babel-loader](https://github.com/babel/babel-loader)
+- 
