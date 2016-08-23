@@ -291,12 +291,14 @@ __componentWillUnmount()__ -> immediately before the component is unmounted from
 
 These following stuff is not really React, but the idea is to give you an insight of which tools you will need/see on a React application environment in the real life.
 
-###Webpack[http://webpack.github.io/](http://webpack.github.io/)
+###Webpack
+[http://webpack.github.io/](http://webpack.github.io/)
 Webpack is a powerful module bundler. A bundle is a JavaScript file that incorporate assets that belong together and should be served to the client in a response to a single file request.
 
 Webpack roams over your application source code, looking for import statements, building a dependency graph, and emitting one (or more) bundles. With plugin "loaders" Webpack can preprocess and minify different non-JavaScript files such as TypeScript, SASS, and LESS files.
 
-###Babel[https://babeljs.io/](https://babeljs.io/)
+###Babel
+[https://babeljs.io/](https://babeljs.io/)
 Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production. You need Babel because browser vendors are slow to adopt new language features.
 
 For example for this ES6 fat arrow funcion:
@@ -336,9 +338,21 @@ ReactDOM.render((
 ```
 React Router is rendered as any other component.
 
-#####What is that `history` thing? [https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md](https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md)
-A history knows how to listen to the browser's address bar for changes and parses the URL into a location object that the router can use to match routes and render the correct set of components
+#####What is that `history` thing?
+[https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md](https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md)
+The <Router> needs to know which history tracking strategy to use. React Router docs recommend browserHistory
 
+Some available histories that we can use are:
+- hashHistory. Easy to implement. (url like: lalala.com/#/users?_k=ckuvup)
+- browserHistory. Hard to implement. (needs server side routing) (urls like: lalala.com/users)
+
+#####Route matching
+```jsx
+<Route path="users/:userId" component={UserProfile} />
+```
+This route will match when the user visits any path that starts with users/ and has any value afterwards. It will match /users/1, /users/143, or even /users/abc (which you'll need to validate on your own).
+
+React Router will pass the value for :userId as a prop to the UserProfile. This props is accessed as this.props.params.userId inside UserProfile
 
 ##Forms
 
@@ -352,4 +366,3 @@ A history knows how to listen to the browser's address bar for changes and parse
 - Webpack official: [http://webpack.github.io/](http://webpack.github.io/)
 - Babel [https://babeljs.io/](https://babeljs.io/)
 - Babel Loader [https://github.com/babel/babel-loader](https://github.com/babel/babel-loader)
-- 
