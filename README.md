@@ -354,11 +354,24 @@ This route will match when the user visits any path that starts with users/ and 
 
 React Router will pass the value for :userId as a prop to the UserProfile. This props is accessed as this.props.params.userId inside UserProfile
 
+##Fetching info from the outworld
+Lets say we need to call some API to get a list of users for example. As we said previously React does not provide any ajax capabilities or framework. So, in first instance we will need an external tool:
+
+Lets use axios
+[https://github.com/mzabriskie/axios](https://github.com/mzabriskie/axios)
+
+Axios is a promise-based Ajax tool that’s very similar (in terms of API) to jQuery’s promise-based Ajax features. How similar are they?
+```javascript
+// jQuery
+$.get('/path/to/user-api').then(function(response) { ... });
+
+// Axios
+axios.get('/path/to/user-api').then(function(response) { ... });
+```
+
 ##Forms
 
 ##Flux Architecture
-
-##Practical Example
 
 ##Useful links:
 - Official JSX docs: [https://facebook.github.io/react/docs/jsx-in-depth.html](https://facebook.github.io/react/docs/jsx-in-depth.html)
