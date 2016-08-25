@@ -70,10 +70,6 @@ var rootElement =
       React.createElement('li', {},
         React.createElement('h2', {}, "Patricio Gabriel Maseda"),
         React.createElement('a', {href: 'mailto:pmaseda@devspark.com'}, 'pmaseda@devspark.com')
-      ),
-      React.createElement('li', {},
-        React.createElement('h2', {}, "Leandro Mastakas"),
-        React.createElement('a', {href: 'mailto:lmastakas@devspark.com'}, 'lmastakas@devspark.com')
       )
     )
   )
@@ -88,12 +84,8 @@ var rootElement = (
     <h1>Contacts</h1>
     <ul>
       <li>
-        <h2>Patricio Gabriel Maseda</h2>
+        <h2 className="subtitle">Patricio Gabriel Maseda</h2>
         <a href="mailto:pmaseda@devspark.com">pmaseda@devspark.com</a>
-      </li>
-      <li>
-        <h2>Leandro Mastakas</h2>
-        <a href="mailto:lmastakas@devspark.com">lmastakas@devspark.com</a>
       </li>
     </ul>
   </div>
