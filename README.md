@@ -63,13 +63,15 @@ JSX expressions are evaluated to ReactElements. Think of them as shorthand for c
 
 For example this code:
 ```javascript
+var name = 'Patricio Gabriel Maseda';
+var email = 'pmaseda@devspark.com';
 var rootElement =
   React.createElement('div', {}, 
     React.createElement('h1', {}, "Contacts"),
     React.createElement('ul', {},
       React.createElement('li', {},
-        React.createElement('h2', {}, "Patricio Gabriel Maseda"),
-        React.createElement('a', {href: 'mailto:pmaseda@devspark.com'}, 'pmaseda@devspark.com')
+        React.createElement('h2', {}, name),
+        React.createElement('a', { href: 'mailto:' + email }, email)
       )
     )
   )
@@ -79,13 +81,15 @@ ReactDOM.render(rootElement, document.getElementById('react-app'))
 
 would do the same that this jsx:
 ```jsx
+var name = 'Patricio Gabriel Maseda';
+var email = 'pmaseda@devspark.com';
 var rootElement = (
   <div>
     <h1>Contacts</h1>
     <ul>
       <li>
-        <h2 className="subtitle">Patricio Gabriel Maseda</h2>
-        <a href="mailto:pmaseda@devspark.com">pmaseda@devspark.com</a>
+        <h2 className="subtitle">{name}</h2>
+        <a href={'mailto:' + email}>{email}</a>
       </li>
     </ul>
   </div>
