@@ -187,7 +187,15 @@ Post.propTypes: {
 ```
 
 
-###DefaultProps: (completar defaultprops y proptypes)
+###DefaultProps:
+We can set a default value for props when they are not received from the parent to avoid errors or even breaking the application.
+```javascript
+CartItem.defaultProps = {
+  title: 'Undefined Product',
+  price: 100,
+  initialQty: 0
+};
+```
 
 
 ##Component state
