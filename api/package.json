@@ -1,0 +1,17 @@
+{
+  "name": "react-training-api",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.5.1",
+    "chance": "~1.0.2",
+    "express": "^4.7.1",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "nodemon": "~1.8.1"
+  },
+  "scripts": {
+    "debug": "DEBUG=http nodemon src/app.js",
+    "start": "node src/app.js"
+  }
+}

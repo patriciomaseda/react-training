@@ -1,11 +1,12 @@
 body {
-	font-family:Helvetica;
+	font-family: Helvetica;
 }
 
 header {
 	padding: 10px;
 	background: #ddf;
 	font-size: 26px;
+	border: 2px solid black;
 }
 
 h2 {

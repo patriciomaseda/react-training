@@ -9,6 +9,7 @@ export default React.createClass({
       <div>
         <Header />
         <ul>
+          <li><Link to="/users">Users</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/links">Links</Link></li>
         </ul>
