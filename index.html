@@ -1,52 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Hello React!</title>
-
-    <!-- react libraries -->
-    <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
-    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
-
-    <!-- babel library for jsx compiling -->
-    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+    <meta charset=utf-8/>
+    <title>Hello Router</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
-
   <body>
-
-    <!-- app container, here is where the app will live -->
-    <div id="app-container">
-      You should not see this text.
-    </div>
-
-    <!-- react in action -->
-    <script type="text/babel">
-
-      const divStyle = {
-        padding: '30px',
-        border: '2px solid blue',
-      };
-
-      const Text = ({ children }) => 
-        <div style={divStyle}>{children}</div>
-      Text.defaultProps = { children: 'Hello I am a stateless!' };
-
-      ReactDOM.render(
-        <div>
-          <Text />
-          <Text>
-            Hello I am a second stateless, and I received what to write.
-          </Text>
-          <Text>
-            Hello I am the third stateless.
-            <Text>
-              And I am inside.
-            </Text>
-          </Text>
-        </div>,
-        document.getElementById('app-container')
-      );
-    </script>
-
+    <div id=app></div>
+    <script src="bundle.js"></script>
   </body>
 </html>
