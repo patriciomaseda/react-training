@@ -10,6 +10,7 @@ export default React.createClass({
         <Header />
         <ul>
           <li><Link to="/users">Users</Link></li>
+          <li><Link to="/users/create">New User</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/links">Links</Link></li>
         </ul>

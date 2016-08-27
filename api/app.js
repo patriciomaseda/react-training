@@ -1,6 +1,10 @@
+'use strict';
+
 var express = require("express");
 var app = express();
 var bodyParser  = require("body-parser");
+var jsonfile = require('jsonfile')
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,15 +22,27 @@ app.get('/users', function(req, res) {
 
   setTimeout(function(){
 
-    res.json([
-      { id: 1, name: 'Marcelo Tinelli' },
-      { id: 2, name: 'Diego Armando Maradona' },
-      { id: 3, name: 'Oscar Ruggeri'},
-      { id: 4, name: 'Jamiroquiai'},
-      { id: 5, name: 'Chencho' },
-    ]);
+    jsonfile.readFile('./data.json', function(err, obj) {
+      res.json(obj);
+    });
   }, 1000);
-}); 
+});
+
+app.post('/users', function(req, res) {
+
+  jsonfile.readFile('./data.json', function(err, obj) {
+
+    obj.push(req.body);
+
+    jsonfile.writeFile('./data.json', obj, function (err) {
+      console.error(err);
+      console.log('Data saved: ', req.body);
+      res.json(req.body);
+    });
+  });
+
+  console.log('Data received for saving', req.body);
+});
 
 app.listen(3033, function() {
 
