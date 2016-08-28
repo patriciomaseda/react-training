@@ -409,7 +409,8 @@ axios.get('/path/to/user-api').then(function(response) { ... });
 
 ##Useful links:
 - Official JSX docs: [https://facebook.github.io/react/docs/jsx-in-depth.html](https://facebook.github.io/react/docs/jsx-in-depth.html)
-- React Router (https://github.com/reactjs/react-router)[https://github.com/reactjs/react-router]
+- React Router [https://github.com/reactjs/react-router](https://github.com/reactjs/react-router)
 - Webpack official: [http://webpack.github.io/](http://webpack.github.io/)
 - Babel [https://babeljs.io/](https://babeljs.io/)
 - Babel Loader [https://github.com/babel/babel-loader](https://github.com/babel/babel-loader)
+- Great todo List example using flux [http://reactkungfu.com/2015/07/react-with-flux-by-example-simple-todo-list-dissected/](http://reactkungfu.com/2015/07/react-with-flux-by-example-simple-todo-list-dissected/)
