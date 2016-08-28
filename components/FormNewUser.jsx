@@ -2,8 +2,10 @@ import React from 'react';
 
 import axios from 'axios';
 
+import App from './App';
 import GenericInput from './GenericInput';
 import SubmitButton from './SubmitButton';
+import FormAlert from './FormAlert';
 
 const FormNewUser = React.createClass({
   getInitialState: function()
@@ -12,12 +14,14 @@ const FormNewUser = React.createClass({
         id: 0,
         name: 'Default Name',
         job: 'Default Job',
+        status: null,
       });
   },
 
   render: function() {
     return (
-      <div>
+      <App>
+        <FormAlert status={this.state.status}/>
         <GenericInput
           name="id"
           onChange={this.handleId}
@@ -37,7 +41,7 @@ const FormNewUser = React.createClass({
           value="Click me and send the form!"
           onClick={this.handleSubmit}
         />
-      </div>
+      </App>
       )
   },
 
@@ -61,13 +65,18 @@ const FormNewUser = React.createClass({
 
   handleSubmit: function() {
 
+    const _this = this;
+
     console.log('FORM STATE BEFORE SAVE', this.state);
 
     axios
       .post('http://localhost:3033/users', this.state)
       .then((response) => {
 
-        this.setState({
+        _this.setState({
+          id: 0,
+          name: 'Default Name',
+          job: 'Default Job',
           status: 'data saved'
         });
       });
