@@ -2,18 +2,20 @@
 
 ##Table of contents
 
-- Introduction, what is react, basic concepts, virtual dom
-- The goods and the bads
-- JSX explanation
-- Hello world example
-- Components and props
-- Events
-- Components State
-- Stateless functional components concept
-- Component LifeCycle
-- Flux Architecture
-- How to setup an environment (Webpack, Babel, npm)
-- Practical example and live coding
+- What is React
+- JSX
+- Hello World!
+- Components
+- Props y State
+- Stateless components
+- Nesting Components
+- Basic Application Architecture
+- Routing
+- Fetching Data
+- Forms
+- Flux
+- Saving data
+
 
 ##Introduction
 
