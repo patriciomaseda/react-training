@@ -22,20 +22,11 @@
     <!-- react in action -->
     <script type="text/babel">
 
-      var ThingsToDo = React.createClass({
-        render: function(){
-          return (
-            <div>
-              <h1>Things To Do</h1>
-              <List tasks={[{id: 1, title: "Fight crime"}, {id: 2, title: "Clean the batcave"}]}/>
-            </div>
-          );
-        }
-      });
-
       var List = React.createClass({
         render: function(){
+        
           var tasks = this.props.tasks;
+
           var items = tasks.map(function(item) {
             return (
               <li key={item.id}>{item.title}</li>
@@ -44,6 +35,17 @@
 
           return (
             <ul>{items}</ul>
+          );
+        }
+      });
+
+      var ThingsToDo = React.createClass({
+        render: function(){
+          return (
+            <div>
+              <h1>Things To Do</h1>
+              <List tasks={[{id: 1, title: "Fight crime"}, {id: 2, title: "Clean the batcave"}]}/>
+            </div>
           );
         }
       });
