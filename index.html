@@ -12,6 +12,36 @@
     <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
   </head>
 
+  <style>
+    .clickme {
+      height: 120px;
+      padding: 10px;
+      background: #dadada;
+      border: 2px solid #aaaaaa;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .big-number {
+      float: right;
+      font-size: 48px;
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      text-align: center;
+    }
+
+    .big-number-only-odd {
+      float: left;
+      font-size: 48px;
+      width: 100px;
+      height: 100px;
+      background: blue;
+      text-align: center;
+      color: white;   
+    }
+  </style>
+
   <body>
 
     <!-- app container, here is where the app will live -->
@@ -22,11 +52,41 @@
     <!-- react in action -->
     <script type="text/babel">
 
+      /* stateless function syntax */
+
+      var BigNumber = ({number}) => {
+        return (
+          <div className="big-number">{number}</div>
+        );
+      };
+
+      /* Extending Component syntax */
+
+      class BigNumberOnlyOdd extends React.Component {
+
+        constructor(props) {
+          super(props);
+        }
+
+        render() {
+
+          if (this.props.number % 2 === 1) {
+            return null;
+          }
+
+          return (
+            <div className="big-number-only-odd">{this.props.number}</div>
+          );
+        }
+      }
+
+      /* React createclass old syntax */
+
       var CounterComponent = React.createClass({
 
         getInitialState : function() {
           return {
-            currentCount : 1,
+            currentCount : 0,
           };
         },
 
@@ -38,9 +98,15 @@
 
         render : function() {
           return (
-            <button onClick={this.handleClick}>
+            <div
+              className="clickme"
+              onClick={this.handleClick}
+            >
               Current count: {this.state.currentCount}
-            </button>
+
+              <BigNumber number={this.state.currentCount} />
+              <BigNumberOnlyOdd number={this.state.currentCount} />
+            </div>
           );
         }
       });
