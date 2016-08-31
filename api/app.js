@@ -19,9 +19,9 @@ app.get('/users', function(req, res) {
   setTimeout(function(){
 
     res.json([
-      { id: 1, name: 'Marcelo Tinelli' },
-      { id: 2, name: 'Diego Armando Maradona' },
-      { id: 3, name: 'Oscar Ruggeri'},
+      { id: 1, name: 'Madonna' },
+      { id: 2, name: 'Britney' },
+      { id: 3, name: 'Justin'},
       { id: 4, name: 'Jamiroquiai'},
       { id: 5, name: 'Chencho' },
     ]);
