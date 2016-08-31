@@ -47,20 +47,41 @@ const FormNewUser = React.createClass({
 
   handleId: function(event) {
 
+    let _this = this;
+
     const id = event.target.value;
     this.setState({ id: id });
+
+    setTimeout(function(){
+
+      console.log('FORM: current state', _this.state);
+    });
   },
 
   handleName: function(event) {
 
+    let _this = this;
+
     const name = event.target.value;
     this.setState({ name: name });
+
+    setTimeout(function(){
+
+      console.log('FORM: current state', _this.state);
+    });
   },
 
   handleJob: function(event) {
 
+    let _this = this;
+
     const job = event.target.value;
     this.setState({ job: job });
+
+    setTimeout(function(){
+
+      console.log('FORM: current state', _this.state);
+    });
   },
 
   handleSubmit: function() {
