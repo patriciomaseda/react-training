@@ -29,16 +29,16 @@
 
       const Text = ({ children }) => 
         <div style={divStyle}>{children}</div>
-      Text.defaultProps = { children: 'Hello I am a stateless!' };
+      Text.defaultProps = { children: 'Hello I am a text!' };
 
       ReactDOM.render(
         <div>
           <Text />
           <Text>
-            Hello I am a second stateless, and I received what to write.
+            Hello I am a second text, and I received what to write.
           </Text>
           <Text>
-            Hello I am the third stateless.
+            Hello I am the third text.
             <Text>
               And I am inside.
             </Text>
