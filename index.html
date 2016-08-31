@@ -68,6 +68,10 @@
           super(props);
         }
 
+        componentDidMount() {
+          console.log('BigNumberOnlyOdd mounted');
+        }
+
         render() {
 
           if (this.props.number % 2 === 1) {
