@@ -404,8 +404,10 @@ axios.get('/path/to/user-api').then(function(response) { ... });
 ```
 
 ##Forms
+please checkout 07-hello-forms branch for the live example
 
 ##Flux Architecture
+please checkout 08-hello-flux for the live example
 
 ##Useful links:
 - Official JSX docs: [https://facebook.github.io/react/docs/jsx-in-depth.html](https://facebook.github.io/react/docs/jsx-in-depth.html)
