@@ -36,9 +36,9 @@
       font-size: 48px;
       width: 100px;
       height: 100px;
-      background: blue;
+      background: white;
       text-align: center;
-      color: white;   
+      color: black;   
     }
   </style>
 
@@ -75,7 +75,12 @@
         render() {
 
           if (this.props.number % 2 === 1) {
-            return null;
+            return (
+              <img 
+                src="./ok.png"
+                className="big-number-only-odd"
+              />
+            );
           }
 
           return (
