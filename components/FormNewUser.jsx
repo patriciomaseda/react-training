@@ -24,17 +24,17 @@ const FormNewUser = React.createClass({
         <FormAlert status={this.state.status}/>
         <GenericInput
           name="id"
-          onChange={this.handleId}
+          whatToDoOnChange={this.handleId}
           value={this.state.id}
         />
         <GenericInput
           name="name"
-          onChange={this.handleName}
+          whatToDoOnChange={this.handleName}
           value={this.state.name}
         />
         <GenericInput
           name="job"
-          onChange={this.handleJob}
+          whatToDoOnChange={this.handleJob}
           value={this.state.job}
         />
         <SubmitButton
@@ -68,6 +68,10 @@ const FormNewUser = React.createClass({
     setTimeout(function(){
 
       console.log('FORM: current state', _this.state);
+
+      if (_this.state.name.length < 4) {
+        console.log('ojo! your name is too short!!');
+      }
     });
   },
 

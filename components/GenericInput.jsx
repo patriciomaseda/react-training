@@ -8,7 +8,7 @@ const GenericInput = React.createClass({
         type="text"
         name={this.props.name}
         value={this.props.value}
-        onChange={this.props.onChange}
+        onChange={this.props.whatToDoOnChange}
       />
     );
   }
