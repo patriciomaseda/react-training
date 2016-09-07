@@ -1,9 +1,9 @@
+
 module.exports = {
   entry: './index.js',
 
   output: {
-    filename: 'bundle.js',
-    publicPath: ''
+    filename: 'bundle.js'
   },
 
   resolve: {
@@ -13,7 +13,6 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/, 
         exclude: /node_modules/, 
         loader: 'babel-loader?presets[]=es2015&presets[]=react'
       }
